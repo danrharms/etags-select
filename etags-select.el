@@ -297,7 +297,7 @@ to do."
     (setq buffer-read-only nil)
     (erase-buffer)
     (insert "Finding tag: " tagname "\n")
-    (mapcar (lambda (tag-file)
+    (mapc (lambda (tag-file)
               (setq tag-count (etags-select-insert-matches tagname tag-file tag-count)))
             tag-files)
     (cond ((= tag-count 0)
