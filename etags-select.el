@@ -450,6 +450,8 @@ Use the C-u prefix to prevent the etags-select window from closing."
       (define-key map "7" (lambda () (interactive) (etags-select-by-tag-number "7")))
       (define-key map "8" (lambda () (interactive) (etags-select-by-tag-number "8")))
       (define-key map "9" (lambda () (interactive) (etags-select-by-tag-number "9")))
+	  (define-key map (kbd "SPC") 'scroll-up-command)
+	  (define-key map (kbd "DEL") 'scroll-down-command)
       (setq etags-select-mode-map map)))
 
 ;;; Mode startup
