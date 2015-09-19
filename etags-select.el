@@ -318,6 +318,7 @@ to do."
            (setq etags-select-opened-window (selected-window))
            (select-window (split-window-vertically))
            (switch-to-buffer etags-select-buffer-name)
+           (shrink-window-if-larger-than-buffer)
            (etags-select-mode tagname)))))
 
 (defun etags-select-goto-tag (&optional arg other-window)
